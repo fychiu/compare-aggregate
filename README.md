@@ -5,10 +5,11 @@ compare-aggregate model on MovieQA task
 `
 1. Tensorflow
 `
+
 `
 2. 7zip
-   sudo apt-get install p7zip-full
-   7z x filename.7z
+sudo apt-get install p7zip-full
+7z x filename.7z
 `   
    
 ## Directories:
