@@ -11,13 +11,16 @@ compare-aggregate model on MovieQA task
    
    
 ## Directories:
-```comp-agg-model:
+```
+comp-agg-model:
 ```
 
-``` plot_vec_wordbased:
-   ===> plot files in which the text is coverted to word vectors
+``` 
+plot_vec_wordbased:
+===> plot files in which the text is coverted to word vectors
 ```
-``` MovieQA/split_data:
+``` 
+MovieQA/split_data:
 ===> qa.json files in which the text is converted wo word vectors
 ===> there are some different size for qa files
 1. qa.mini_train.split.json: the first 1000 data in training data
