@@ -65,15 +65,6 @@ def Train_TestMODEL(train_q,val_q,plotFilePath,GRUAttention_object,epoch,batch_s
 			batchC.append(AnsVec[2])
 			batchD.append(AnsVec[3])
 			batchE.append(AnsVec[4])
-			'''
-			print(np.array(P).shape)
-			print(np.array(Q).shape)
-			print(np.array(AnsVec[0]).shape)
-			print(np.array(AnsVec[1]).shape)
-			print(np.array(AnsVec[2]).shape)
-			print(np.array(AnsVec[3]).shape)
-			print(np.array(AnsVec[4]).shape, type(AnsVec[4]))
-			'''
 			if len(batchP) == batch_size:
 				count+=1
 				batchP = np.asarray(batchP)
@@ -157,42 +148,6 @@ def Train_TestMODEL(train_q,val_q,plotFilePath,GRUAttention_object,epoch,batch_s
 
 		print('correct:%d total:%d' % (testcorrect,len(val_q)))
 
-
-		#######    Test training set   #########
-		# traincorrect = 0.0
-		# for question in train_q:
-		# 	imdb_key = plotFilePath+question["imdb_key"]+".wiki.json"
-		# 	with open(imdb_key) as data_file:
-		# 		rawP = json.load(data_file)['plot_data']
-
-		# 	P = rawP + [filler]*(LONGEST_P_NUM-len(rawP))
-		# 	Q = question["question"]
-		# 	AnsVec = []
-		# 	AnsOption = []
-		# 	for j in range(5): 
-		# 		if question["answers"][j]:
-		# 			pass
-		# 		else:
-		# 			question["answers"][j] = [filler]
-				
-		# 		AnsVec.append(question["answers"][j])
-		# 		AnsOption.append(0)
-		# 	AnsOption[question["correct_index"]] = 1 
-			
-
-			
-		# 	tmp = GRUAttention_object.test(P,Q,AnsVec[0],AnsVec[1],AnsVec[2],AnsVec[3],AnsVec[4])
-
-
-
-		# 	if AnsOption[tmp] == 1 :
-		# 		traincorrect += 1
-	 # 	print('correct:%d total:%d' % (traincorrect,len(train_q)))
-	 # 	print('%f  %f' % (testcorrect/len(val_q),traincorrect/len(train_q))   )
-
-
-
-
 def getLongestP(plotFilePath):
 
 	longest = 0
@@ -205,27 +160,3 @@ def getLongestP(plotFilePath):
 			if lenP >= longest :
 				longest = lenP
 	return longest
-
-# def getLongestQA(train_q,val_q):
-# 	longest_q = 0
-# 	longest_ans = 0
-# 	for question in train_q:
-# 		if len(question["question"])>=longest_q:
-# 			longest_q = len(question["question"])
-# 		for ans in question["answers"]:
-# 			if len(ans)>=longest_ans:
-# 				longest_ans = len(ans)
-# 	for question in val_q:
-# 		if len(question["question"])>=longest_q:
-# 			longest_q = len(question["question"])
-# 		for ans in question["answers"]:
-# 			if len(ans)>=longest_ans:
-# 				longest_ans = len(ans)
-
-# 	return longest_q,longest_ans
-
-
-
-
-
-
