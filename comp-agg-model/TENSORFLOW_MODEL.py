@@ -1,9 +1,5 @@
-#import h5py
 import sys
-#sys.path.append('/usr/local/lib/python2.7/site-packages')
-#import cv2
 import tensorflow as tf
-# import tflearn
 import numpy as np
 
 from tensorflow.python.ops import control_flow_ops
@@ -12,12 +8,6 @@ from tensorflow.python.ops import state_ops
 from tensorflow.python.framework import ops
 from tensorflow.python.training import optimizer
 class AdamaxOptimizer(optimizer.Optimizer):
-    """Optimizer that implements the Adamax algorithm.
-    See [Kingma et. al., 2014](http://arxiv.org/abs/1412.6980)
-    ([pdf](http://arxiv.org/pdf/1412.6980.pdf)).
-    @@__init__
-    """
-
     def __init__(self, learning_rate=0.001, beta1=0.9, beta2=0.999, use_locking=False, name="Adamax"):
         super(AdamaxOptimizer, self).__init__(use_locking, name)
         self._lr = learning_rate
