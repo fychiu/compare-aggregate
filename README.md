@@ -20,8 +20,9 @@ UTIL.py contains all the helper functions, including padding, batching and some 
 TENSORFLOW_MODEL.py constructs the model itself using Tensorflow.
 main.py imports the above python scripts and starts running the model
 
-In the command line, you can simply start training and testing with the command:
-`python main.py`    
+In the command line, you can simply start training and testing with the command:    
+
+`python main.py`    
 If all the needed files and data are placed properly, the training should run successfully.
 In default, every 50 training batches will be followed by 1 testing(on validation set) batch to check the current progress. And every 15 epoch, we will perform testing on training set to examine overfitting.
 
