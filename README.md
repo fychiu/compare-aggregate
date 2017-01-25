@@ -14,7 +14,7 @@ comp-agg-model:
 
 
 plot_vec_wordbased:
-===> plot files in which the text is coverted to word vectors
+   ===> plot files in which the text is coverted to word vectors
 
 MovieQA/split_data:
 ===> qa.json files in which the text is converted wo word vectors
