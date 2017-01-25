@@ -1,7 +1,7 @@
 # compare-aggragate
 compare-aggregate model on MovieQA task
 
-## To use the model:
+## Preliminary:
 ```
 1. Tensorflow   
 
@@ -9,10 +9,28 @@ compare-aggregate model on MovieQA task
 sudo apt-get install p7zip-full   
 7z x filename.7z
 ```
+
+## To use model:
+
+To train the compared-aggregate model, files should be placed into corresponding folders properly.
+Three python scripts put up the comp-aggr model: TENSORFLOW_MODEL.py, UTIL.py, main.py
+   
+   
+UTIL.py contains all the helper functions, including padding, batching and some preprocessing.
+TENSORFLOW_MODEL.py constructs the model itself using Tensorflow.
+main.py imports the above python scripts and starts running the model
+
+In the command line, you can simply start training and testing with the command:
+`python main.py`    
+If all the needed files and data are placed properly, the training should run successfully.
+In default, every 50 training batches will be followed by 1 testing(on validation set) batch to check the current progress. And every 15 epoch, we will perform testing on training set to examine overfitting.
+
+
    
 ## Directories:
 ```
 comp-agg-model:
+   three .py files
 ```
 
 ``` 
