@@ -1,7 +1,7 @@
 # compare-aggragate
 compare-aggregate model on MovieQA task
 
-To use the model:
+## To use the model:
 
 1. Tensorflow
 
