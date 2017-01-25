@@ -22,10 +22,10 @@ LONGEST_P_NUM = 2392
 
 
 print('File \'json\' Loading.....')
-with open("../MovieQA/data/qa.mini_train.300d.json") as data_file:    
+with open("../MovieQA/split_data/qa.mini_train.300d.json") as data_file:    
 	train_q = json.load(data_file)
 
-with open("../MovieQA/data/qa.mini_val.300d.json") as data_file:   
+with open("../MovieQA/split_data/qa.mini_val.300d.json") as data_file:   
 	val_q = json.load(data_file)
 
 
