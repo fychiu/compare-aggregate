@@ -11,11 +11,6 @@ from tensorflow.python.ops import math_ops
 from tensorflow.python.ops import state_ops
 from tensorflow.python.framework import ops
 from tensorflow.python.training import optimizer
-# from tflearn.layers.core import input_data, dropout, fully_connected
-# from tflearn.layers.conv import conv_2d, max_pool_2d
-# from tflearn.layers.estimator import regression
-# from tensorflow.python.ops import rnn_cell
-# from tensorflow.python.ops import seq2seq
 class AdamaxOptimizer(optimizer.Optimizer):
     """Optimizer that implements the Adamax algorithm.
     See [Kingma et. al., 2014](http://arxiv.org/abs/1412.6980)
